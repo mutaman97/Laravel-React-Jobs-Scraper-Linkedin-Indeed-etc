@@ -1,0 +1,85 @@
+{
+  "linkedIn": {
+    "name": "LinkedIn",
+    "baseURI": "https://linkedin.com",
+    "baseSearchURI": "https://linkedin.com/jobs/search",
+    "searchSegments": "keywords",
+    "parentDOM": ".job-search-results",
+    "search_query_separator": "%20",
+    "link_type": "absolute",
+    "extractables": [
+      {
+        "variable": "job_id",
+        "source": ".job-card-container",
+        "attribute": "data-job-id"
+      },
+      {
+        "variable": "titles",
+        "source": ".job-card-list__title",
+        "attribute": "text"
+      },
+      {
+        "variable": "links",
+        "source": ".job-card-list__title",
+        "attribute": "href"
+      },
+      {
+        "variable": "company",
+        "source": ".result-card__subtitle",
+        "attribute": "text"
+      },
+      {
+        "variable": "location",
+        "source": ".job-card-container__metadata-item",
+        "attribute": "text"
+      },
+      {
+        "variable": "easy_apply",
+        "source": ".job-card-container__apply-method",
+        "attribute": "text"
+      },
+      {
+        "variable": "dates",
+        "source": ".job-card-container__footer-item",
+        "attribute": "text"
+      }
+    ]
+  },
+  "stackOverflow": {
+    "name": "Stack Overflow",
+    "baseURI": "https://stackoverflow.com",
+    "baseSearchURI": "https://stackoverflowjobs.com",
+    "searchSegments": "q",
+    "parentDOM": "parentDOM",
+    "search_query_separator": "+",
+    "link_type": "relative",
+    "extractables": [
+      {
+        "variable": "titles",
+        "source": ".listResults h2",
+        "attribute": "text"
+      },
+      {
+        "variable": "links",
+        "source": ".listResults a.s-link",
+        "attribute": "href"
+      },
+      {
+        "variable": "tags",
+        "source": ".ps-relative.d-inline-block",
+        "attribute": "text"
+      },
+      {
+        "variable": "location",
+        "source": ".listResults h3",
+        "attribute": "text"
+      },
+      {
+        "variable": "dates",
+        "source": ".listResults ul.fs-caption li:first-child",
+        "attribute": "text"
+      }
+    ]
+  }
+}
+

@@ -1,0 +1,155 @@
+{
+
+    "linkedIn":{
+        "name": "LinkedIn",
+        "baseURI": "https://linkedin.com",
+        "baseSearchURI" : "https://linkedin.com/jobs/search",
+        "searchSegments": "keywords",
+        "parentDOM": ".job-search-results",
+        "search_query_separator" : "%20",
+        "link_type": "absolute",
+        "locationParam": "location",
+        "extractables": [
+            {
+                "variable": "titles",
+                "source": ".base-search-card__title",
+                "attribute": "text"
+            },
+            {
+                "variable": "links",
+                "source": ".base-card__full-link",
+                "attribute": "href"
+            },
+             {
+                "variable": "company",
+                "source": ".base-search-card__subtitle",
+                "attribute": "text"
+            },
+            {
+                "variable": "location",
+                "source": ".job-search-card__location",
+                "attribute": "text"
+            },
+            {
+                "variable": "dates",
+                "source": ".job-search-card__listdate",
+                "attribute": "text"
+            }
+        ]
+
+    },
+    "stackOverflow":{
+        "name": "Stack Overflow",
+        "baseURI": "https://stackoverflow.com",
+        "baseSearchURI" : "https://stackoverflowjobs.com",
+        "searchSegments": "q",
+        "parentDOM": "parentDOM",
+        "search_query_separator" : "+",
+        "link_type" : "relative",
+        "locationParam": "l",
+        "extractables": [
+            {
+                "variable": "titles",
+                "source": ".listResults h2",
+                "attribute": "text"
+            },
+            {
+                "variable": "links",
+                "source": ".listResults a.s-link",
+                "attribute": "href"
+            },
+            {
+                "variable": "tags",
+                "source": ".ps-relative.d-inline-block",
+                "attribute": "text"
+            },
+            {
+                "variable": "location",
+                "source": ".listResults h3",
+                "attribute": "text"
+            },
+            {
+                "variable": "dates",
+                "source": ".listResults ul.fs-caption li:first-child",
+                "attribute": "text"
+            }
+        ]
+
+    },
+    "indeed": {
+        "name": "Indeed",
+        "baseURI": "https://www.indeed.com",
+        "baseSearchURI": "https://www.indeed.com/jobs",
+        "searchSegments": "q",
+        "parentDOM": ".jobsearch-ResultsList",
+        "search_query_separator": "+",
+        "link_type": "absolute",
+        "locationParam": "l",
+        "extractables": [
+            {
+                "variable": "titles",
+                "source": ".jobTitle",
+                "attribute": "text"
+            },
+            {
+                "variable": "links",
+                "source": ".jobTitle a",
+                "attribute": "href"
+            },
+            {
+                "variable": "company",
+                "source": ".companyName",
+                "attribute": "text"
+            },
+            {
+                "variable": "location",
+                "source": ".companyLocation",
+                "attribute": "text"
+            },
+            {
+                "variable": "dates",
+                "source": ".date",
+                "attribute": "text"
+            }
+        ]
+    },
+    "glassdoor": {
+        "name": "Glassdoor",
+        "baseURI": "https://www.glassdoor.com",
+        "baseSearchURI": "https://www.glassdoor.com/Job/jobs.htm",
+        "searchSegments": "q",
+        "parentDOM": ".JobsList",
+        "search_query_separator": "+",
+        "link_type": "absolute",
+        "locationParam": "loc",
+        "extractables": [
+            {
+                "variable": "titles",
+                "source": ".jobTitle",
+                "attribute": "text"
+            },
+            {
+                "variable": "links",
+                "source": ".jobLink",
+                "attribute": "href"
+            },
+            {
+                "variable": "company",
+                "source": ".employerName",
+                "attribute": "text"
+            },
+            {
+                "variable": "location",
+                "source": ".location",
+                "attribute": "text"
+            },
+            {
+                "variable": "dates",
+                "source": ".date",
+                "attribute": "text"
+            }
+        ]
+    }
+
+}
+

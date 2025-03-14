@@ -1,0 +1,74 @@
+{
+    "stackOverflow":{
+        "name": "Stack Overflow",
+        "baseSearchURI" : "https://stackoverflow.com/jobs",
+        "searchSegments": "q",
+        "parentDOM": "",
+        "search_query_separator" : "+",
+        "extractables": [
+            {
+                "variable": "titles",
+                "source": ".listResults h2",
+                "attribute": "text"
+            },
+            {
+                "variable": "links",
+                "source": ".listResults a.s-link",
+                "attribute": "href"
+            },
+            {
+                "variable": "tags",
+                "source": ".ps-relative.d-inline-block",
+                "attribute": "text"
+            },
+            {
+                "variable": "location",
+                "source": ".listResults h3",
+                "attribute": "text"
+            },
+            {
+                "variable": "dates",
+                "source": ".listResults ul.fs-caption li:first-child",
+                "attribute": "text"
+            }
+        ]
+
+    },
+
+    "linkedIn":{
+        "name": "LinkedIn",
+        "baseSearchURI" : "https://linkedin.com/jobs/search",
+        "searchSegments": "keywords",
+        "parentDOM": ".job-search-results",
+        "search_query_separator" : "%20",
+        "extractables": [
+            {
+                "variable": "titles",
+                "source": ".jobs-search__results-list a.result-card__full-card-link span.screen-reader-text",
+                "attribute": "text"
+            },
+            {
+                "variable": "links",
+                "source": ".jobs-search__results-list a.result-card__full-card-link",
+                "attribute": "href"
+            },
+             {
+                "variable": "company",
+                "source": ".result-card__subtitle",
+                "attribute": "text"
+            },
+            {
+                "variable": "location",
+                "source": ".jobs-search__results-list .job-result-card__contents .job-result-card__location",
+                "attribute": "text"
+            },
+            {
+                "variable": "dates",
+                "source": ".job-result-card__listdate",
+                "attribute": "text"
+            }
+        ]
+
+    }
+}
+
