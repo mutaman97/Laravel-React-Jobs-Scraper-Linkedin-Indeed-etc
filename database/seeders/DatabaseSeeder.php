@@ -15,6 +15,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        // First seed countries
+        $this->call(CountrySeeder::class);
+
         // Create 10 users
         $users = User::factory(10)->create();
 
